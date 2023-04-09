@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <aside id='left'>
+            <nav>
+                <a href="#cv">CV</a>
+                <a href="#professional_projects">Professional Projects</a>
+                <a href="#side_projects">Side Projects</a>
+            </nav>
+        </aside>
+
+        <main id='right'>
+            <section id="cv">
+                <h2>CV</h2>
+                <p>
+                    Organically grown a startup from inception to stable operation with 500kEUR revenue in the energy
+                    grid asset monitoring business. Initiative, oversight and full-stack involvement in the development
+                    of a product line of power transformer monitoring systems including high-frequency analog sensors
+                    and circuits, embedded data processing, rich onboard UIs, and cloud backend including data
+                    management and visualization.
+                </p>
+            </section>
+
+            <section id="professional_projects">
+                <h2>Professional Projects</h2>
+            </section>
+
+            <section id="side_projects">
+                <h2>Side Projects</h2>
+                <div class='section-item'>
+                    <h3>modbus_server</h3>
+                    <github-link data-href='https://github.com/ckattmann/modbus_server'></github-link>
+                    <p>
+                        Pure Python library for a Modbus server. Threaded, with pluggable data backends, redis support,
+                        no external dependencies.
+                    </p>
+                </div>
+                <div class='section-item'>
+                    <h3>modbus_client</h3>
+                    <div class='link-line'>
+                        <github-link data-href='https://github.com/ckattmann/modbus_client'></github-link>
+                        <pypi-link data-href='https://pypi.org/project/modbus_server'></pypi-link>
+                    </div>
+                    <p>
+                        Pure Python library for a Modbus client. Simple, no frills, supports most of the relevant
+                        ModbusTCP functions
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        Christoph Kattmann
+    </footer>
+
+    <!-- Main CSS -->
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #container {
+            display: flex;
+            max-width: 1000px;
+
+        }
+
+        aside#left {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 10em;
+            padding-right: 2em;
+        }
+
+        nav {
+            margin-top: 10em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: fixed;
+            top: 0;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        nav>a:hover {
+            color: black;
+        }
+
+        #right {
+            flex: 2 1 800px;
+        }
+
+        section {
+            min-height: 80vh;
+            padding-top: 10em;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .section-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-item h3 {
+            margin-top: 2em;
+            margin-bottom: 0.2em;
+        }
+
+        .section-item p {
+            margin-top: 0;
+            margin-bottom: 0.2em;
+        }
+    </style>
+
+
+    <!-- Web Component for Github Link -->
+    <template id='github-link-template'>
+        <a href="https://github.com/ckattmann">
+            <svg class='github-logo' viewbox='0 0 100 105' xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                    fill="#24292f" />
+            </svg>
+            <div class="github-link-text">Github</div>
+        </a>
+
+        <style>
+            a {
+                text-decoration: none;
+                color: #222;
+                display: flex;
+                align-items: center;
+                height: 1.1em;
+                padding: 2px 2px;
+                float: left;
+                border-radius: 3px;
+                margin-bottom: 0.2em;
+            }
+
+            a:hover {
+                background-color: whitesmoke;
+            }
+
+            .github-logo {
+                height: 1em;
+                width: 1em;
+                margin-right: 0.4em;
+            }
+
+            .github-link-text {
+                padding-top: 2px;
+                margin-right: 0.7em;
+            }
+        </style>
+    </template>
+
+    <script type="text/javascript">
+        class GithubLink extends HTMLElement {
+            constructor() {
+                super();
+                let templateContent = document.getElementById("github-link-template").content;
+
+                const shadowRoot = this.attachShadow({mode: "open"});
+                shadowRoot.appendChild(templateContent.cloneNode(true));
+
+                shadowRoot.querySelector('a').href = this.dataset.href;
+            }
+        }
+        customElements.define("github-link", GithubLink);
+
+    </script>
+
+
+    <!-- Web Component for PyPI Link -->
+    <template id='pypi-link-template'>
+        <a href="https://github.com/ckattmann">
+            <svg class='pypi-logo' width="100%" height="100%" viewBox="0 0 118 104" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:bevel;">
+                <path
+                    d="M16.854,39.647l16.592,6.04l16.838,-6.129l-16.592,-6.04l-16.838,6.129Zm16.664,-13.635l16.593,6.04l16.838,-6.129l-16.592,-6.04l-16.839,6.129Z"
+                    style="fill:#f7f7f4;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M33.518,26.012l16.593,6.04l0,19.5l-16.593,-6.038l0,-19.502Z"
+                    style="fill:#efeeea;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M0.189,65.401l16.592,6.04l16.839,-6.129l-16.593,-6.039l-16.838,6.128Z"
+                    style="fill:#f7f7f4;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M0.189,65.401l16.592,6.04l0,19.501l-16.592,-6.038l0,-19.503Z"
+                    style="fill:#efeeea;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M0.189,37.668l16.592,6.04l16.839,-6.129l-16.593,-6.039l-16.838,6.128Z"
+                    style="fill:#f7f7f4;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M16.781,43.708l0,19.501l16.839,-6.128l-0,-19.502l-16.839,6.129Z"
+                    style="fill:#fff;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M0.189,37.668l16.592,6.04l0,19.501l-16.592,-6.038l0,-19.503Z"
+                    style="fill:#efeeea;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M16.853,71.462l16.593,6.039l-0,19.502l-16.592,-6.039l-0.001,-19.502Z"
+                    style="fill:#efeeea;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M16.853,51.767l16.593,6.039l16.838,-6.129l-16.592,-6.038l-16.839,6.128Z"
+                    style="fill:#f7f7f4;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M16.853,51.767l16.593,6.039l-0,19.502l-16.592,-6.039l-0.001,-19.502Z"
+                    style="fill:#efeeea;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M100.106,65.381l-0,19.502l16.837,-6.128l0,-19.502l-16.837,6.128Z"
+                    style="fill:#fff;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M83.44,71.441l0,19.501l16.839,-6.128l-0,-19.502l-16.839,6.129Z"
+                    style="fill:#ffd242;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path
+                    d="M97.227,76.196c0,0.912 -0.341,1.912 -0.947,2.778c-0.606,0.866 -1.43,1.528 -2.287,1.84c-1.773,0.645 -3.232,-0.376 -3.233,-2.263c-0,-0.913 0.34,-1.913 0.947,-2.779c0.606,-0.866 1.429,-1.528 2.286,-1.84c0.857,-0.312 1.681,-0.249 2.287,0.176c0.606,0.424 0.947,1.176 0.947,2.089l0,-0.001Z"
+                    style="fill:#fff;fill-rule:nonzero;" />
+                <path d="M66.776,77.501l-0,19.502l16.838,-6.129l0,-19.502l-16.838,6.129Z"
+                    style="fill:#ffd242;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M50.111,83.561l0,19.502l16.838,-6.129l-0,-19.501l-16.838,6.128Z"
+                    style="fill:#fff;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M33.518,77.521l16.593,6.04l0,19.502l-16.593,-6.04l0,-19.502Z"
+                    style="fill:#efeeea;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M100.106,45.687l-0,19.501l16.837,-6.128l0,-19.502l-16.837,6.129Z"
+                    style="fill:#ffd242;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M83.513,19.953l16.593,6.039l16.837,-6.129l-16.592,-6.04l-16.838,6.13Z"
+                    style="fill:#ffc91d;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path
+                    d="M100.106,25.992l-0,19.501l16.837,-6.128l0,-19.502l-16.837,6.129Zm-16.666,25.755l0,19.5l16.839,-6.128l-0,-19.501l-16.839,6.129Z"
+                    style="fill:#ffd242;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M83.44,32.052l0,19.5l16.839,-6.128l-0,-19.501l-16.839,6.129Z"
+                    style="fill:#3775a9;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M66.848,6.317l16.592,6.04l16.839,-6.129l-16.592,-6.039l-16.839,6.128Z"
+                    style="fill:#2f6491;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M83.44,12.356l0,19.502l16.839,-6.128l-0,-19.502l-16.839,6.128Z"
+                    style="fill:#3775a9;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M66.776,57.806l-0,19.502l16.838,-6.129l0,-19.502l-16.838,6.129Z"
+                    style="fill:#ffd242;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path
+                    d="M66.776,38.111l-0,19.502l16.838,-6.129l0,-19.502l-16.838,6.129Zm-16.665,25.755l0,19.502l16.838,-6.129l-0,-19.501l-16.838,6.128Z"
+                    style="fill:#3775a9;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path
+                    d="M33.518,57.828l16.593,6.038l0,19.502l-16.593,-6.04l0,-19.5Zm0,-19.696l16.593,6.039l16.838,-6.128l-16.592,-6.039l-16.839,6.128Z"
+                    style="fill:#2f6491;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M50.111,44.171l0,19.502l16.838,-6.129l-0,-19.501l-16.838,6.128Z"
+                    style="fill:#3775a9;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path
+                    d="M33.518,38.132l16.593,6.039l0,19.502l-16.593,-6.039l0,-19.502Zm16.666,-25.755l16.592,6.04l16.838,-6.13l-16.593,-6.038l-16.837,6.128Z"
+                    style="fill:#2f6491;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M66.776,18.417l-0,19.501l16.838,-6.129l0,-19.502l-16.838,6.13Z"
+                    style="fill:#3775a9;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path d="M50.184,12.377l16.592,6.04l-0,19.501l-16.592,-6.039l-0,-19.502Z"
+                    style="fill:#2f6491;fill-rule:nonzero;stroke:#ccc;stroke-width:0.38px;" />
+                <path
+                    d="M76.296,24.68c0,0.912 -0.341,1.913 -0.947,2.778c-0.606,0.866 -1.43,1.529 -2.287,1.841c-0.858,0.312 -1.681,0.248 -2.287,-0.176c-0.606,-0.425 -0.947,-1.176 -0.947,-2.089c-0.001,-0.912 0.34,-1.913 0.947,-2.778c0.606,-0.866 1.429,-1.529 2.287,-1.841c0.857,-0.312 1.68,-0.248 2.287,0.176c0.606,0.425 0.947,1.177 0.947,2.089Z"
+                    style="fill:#fff;fill-rule:nonzero;" />
+            </svg>
+            <div class="pypi-link-text">PyPI</div>
+        </a>
+
+        <style>
+            a {
+                text-decoration: none;
+                color: #222;
+                display: flex;
+                align-items: center;
+                height: 1.1em;
+                padding: 2px 2px;
+                float: left;
+                border-radius: 3px;
+                margin-bottom: 0.2em;
+            }
+
+            a:hover {
+                background-color: whitesmoke;
+            }
+
+            .pypi-logo {
+                height: 1em;
+                width: 1em;
+                margin-right: 0.4em;
+            }
+
+            .pypi-link-text {
+                padding-top: 2px;
+            }
+        </style>
+    </template>
+
+    <script type="text/javascript">
+        class PyPILink extends HTMLElement {
+            constructor() {
+                super();
+                let templateContent = document.getElementById("pypi-link-template").content;
+
+                const shadowRoot = this.attachShadow({mode: "open"});
+                shadowRoot.appendChild(templateContent.cloneNode(true));
+
+                shadowRoot.querySelector('a').href = this.dataset.href;
+            }
+        }
+        customElements.define("pypi-link", PyPILink);
+
+    </script>
+</body>
+
+
+</html>
