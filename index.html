@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    <title>cktmn.site</title>
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
 </head>
 
@@ -10,6 +11,7 @@
     <div id="container">
         <aside id='left'>
             <nav>
+                <a href="#aboutme">About Me</a>
                 <a href="#cv">CV</a>
                 <a href="#professional_projects">Professional Projects</a>
                 <a href="#side_projects">Side Projects</a>
@@ -17,40 +19,160 @@
         </aside>
 
         <main id='right'>
+            <section id="aboutme">
+                <h1>Hello!</h1>
+                <p></p>
+            </section>
+
             <section id="cv">
                 <h2>CV</h2>
-                <p>
-                    Organically grown a startup from inception to stable operation with 500kEUR revenue in the energy
-                    grid asset monitoring business. Initiative, oversight and full-stack involvement in the development
-                    of a product line of power transformer monitoring systems including high-frequency analog sensors
-                    and circuits, embedded data processing, rich onboard UIs, and cloud backend including data
-                    management and visualization.
-                </p>
+
+                <div class='section-item'>
+                    <h3>Managing Director, BSS Hochspannungstechnik GmbH</h3>
+                    <div class='h3-subtitle'>
+                        <calendar-icon></calendar-icon>
+                        <h4>03/2018 - now </h4>
+                        <location-icon></location-icon>
+                        <h4>Stuttgart / Copenhagen</h4>
+                    </div>
+                    <p>
+                        Organically grown a startup from inception to stable operation with 500kEUR revenue in the
+                        energy
+                        grid asset monitoring business. Initiative, oversight and full-stack involvement in the
+                        development
+                        of a product line of power transformer monitoring systems including high-frequency analog
+                        sensors
+                        and circuits, embedded data processing, rich onboard UIs, and cloud backend including data
+                        management and visualization.
+                    </p>
+                    <ul>
+                        <li>Organizational, personal, and product leader of a bootstrapped and customer-funded company
+                        </li>
+                        <li>Ownership of customer relationships, marketing and sales processes</li>
+                        <li>Managed the development and bringing to market of a connected monitoring system for
+                            high-value energy grid assets</li>
+                    </ul>
+                </div>
+                <div class='section-item'>
+                    <h3>Scientist, University of Stuttgart</h3>
+                    <div class='h3-subtitle'>
+                        <calendar-icon></calendar-icon>
+                        <h4>03/2012 - 03/2018 </h4>
+                        <location-icon></location-icon>
+                        <h4>Stuttgart</h4>
+                    </div>
+                    <p>
+                        Teaching and research responsibilities, including organization of multiple research projects
+                        such as
+                    </p>
+                    <ul>
+                        <li>c/sells: 600MEUR project with 60+ companys over 3 years</li>
+                        <li>Fastpf, a power flow simulation library</li>
+                        <li>Installation and Management of an energy monitoring system in the ARENA2036 research factory
+                        </li>
+                        <li>Numerous publications, conference and industry standards group participations</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="professional_projects">
                 <h2>Professional Projects</h2>
+
+                <div class='section-item'>
+                    <h3>PDM-600</h3>
+                    <div class='link-line'>
+                        <web-link data-href="https://bss-hochspannungstechnik.de/en/products/pdm-600">Link</web-link>
+                    </div>
+                    <p>
+                        A partial discharge monitoring system we have developed and are continuosly improving at BSS.
+                    </p>
+                </div>
+
+                <div class='section-item'>
+                    <h3>BSS Monitoring Cloud</h3>
+                    <div class='link-line'>
+                        <!-- <a href="https://bss-hochspannungstechnik.de"> Website</a> -->
+                        <web-link data-href="https://monitoring.bss-hochspannungstechnik.de">Link</web-link>
+                    </div>
+                    <p>
+                        Our data platform which manages VPN connections & displays live and historic data.
+                    </p>
+                </div>
+
+                <div class='section-item'>
+                    <h3>BSS Main Website</h3>
+                    <div class='link-line'>
+                        <!-- <a href="https://bss-hochspannungstechnik.de"> Website</a> -->
+                        <web-link data-href="https://bss-hochspannungstechnik.de">Link</web-link>
+                    </div>
+                    <p>
+                        Our main website. Vue2 SPA, 2 languages, loads in milliseconds.
+                    </p>
+                </div>
+
+                <div class='section-item'>
+                    <h3>fastpf</h3>
+                    <div class='link-line'>
+                        <github-link data-href='https://github.com/ckattmann/fastpf'></github-link>
+                        <pypi-link data-href='https://pypi.org/project/fastpf'></pypi-link>
+                    </div>
+                    <p>
+                        Powerflow library developed at the University of Stuttgart, used for most result in my <a
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://www.ieh.uni-stuttgart.de/dokumente/dissertationen/2022_Dissertation_Kattmann_Langversion.pdf">Dissertation</a>.
+                        Uses ahead-of-time compilation for Python code using numba, and demonstrates various performance
+                        optimization techniques.
+                    </p>
+                </div>
+
+                <div class='section-item'>
+                    <h3>PQM-800</h3>
+                    <div class='link-line'>
+                        <web-link data-href="https://bss-hochspannungstechnik.de/en/products/pqm-800">Link</web-link>
+                    </div>
+                    <p>
+                        A high-frequency (1 Megasample x 8 channels) power quality monitoring system with dynamic transient triggers and high-resolution harmonics recording.
+                    </p>
+                </div>
             </section>
 
             <section id="side_projects">
                 <h2>Side Projects</h2>
+
                 <div class='section-item'>
                     <h3>modbus_server</h3>
-                    <github-link data-href='https://github.com/ckattmann/modbus_server'></github-link>
+                    <div class='link-line'>
+                        <github-link data-href='https://github.com/ckattmann/modbus_server'></github-link>
+                        <pypi-link data-href='https://pypi.org/project/modbus_server'></pypi-link>
+                    </div>
                     <p>
-                        Pure Python library for a Modbus server. Threaded, with pluggable data backends, redis support,
-                        no external dependencies.
+                        Pure Python library for a ModbusTCP server. Extremely simple and fast (enough), threaded, with
+                        pluggable data backends, redis support, no external dependencies.
                     </p>
                 </div>
+
                 <div class='section-item'>
                     <h3>modbus_client</h3>
                     <div class='link-line'>
                         <github-link data-href='https://github.com/ckattmann/modbus_client'></github-link>
-                        <pypi-link data-href='https://pypi.org/project/modbus_server'></pypi-link>
+                        <pypi-link data-href='https://pypi.org/project/modbus_client'></pypi-link>
                     </div>
                     <p>
-                        Pure Python library for a Modbus client. Simple, no frills, supports most of the relevant
+                        Pure Python library for a ModbusTCP client. Simple, no frills, supports most of the relevant
                         ModbusTCP functions
+                    </p>
+                </div>
+
+                <div class='section-item'>
+                    <h3>simpleinflux</h3>
+                    <div class='link-line'>
+                        <github-link data-href='https://github.com/ckattmann/simpleinflux'></github-link>
+                        <pypi-link data-href='https://pypi.org/project/simpleinflux'></pypi-link>
+                    </div>
+                    <p>
+                        Python frontend for InfluxDB with a much more sane API than the official client, including
+                        convenience functions for common timeranges (today, last week, ...) and support for different
+                        timestamp formats.
                     </p>
                 </div>
             </section>
@@ -60,7 +182,8 @@
     </div>
 
     <footer>
-        Christoph Kattmann 2023
+        <span>Christoph Kattmann 2023</span>
+        <github-link data-href='https://raw.githubusercontent.com/ckattmann/personal_site/main/index.html'>Source</github-link>
     </footer>
 
     <!-- Main CSS -->
@@ -129,15 +252,169 @@
             margin-bottom: 0.2em;
         }
 
+        .section-item .h3-subtitle {
+            display: flex;
+        }
+
+        .section-item .h3-subtitle>h4 {
+            margin-right: 1em;
+        }
+
+        .section-item h4 {
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+        }
+
         .section-item p {
             margin-top: 0;
             margin-bottom: 0.2em;
         }
 
         footer {
+            display: flex;
+            align-items: center;
             margin: 2em 0;
         }
+
+        footer > *{
+            margin: 0 1em;
+        }
     </style>
+
+
+
+
+    <!-- Calendar icon -->
+    <template id='calendar-template'>
+        <div class="calendar-icon-container">
+            <svg class='calendar-icon' xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+                <path
+                    d="M180 976q-24 0-42-18t-18-42V296q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600V486H180v430Zm0-490h600V296H180v130Zm0 0V296v130Zm300 230q-17 0-28.5-11.5T440 616q0-17 11.5-28.5T480 576q17 0 28.5 11.5T520 616q0 17-11.5 28.5T480 656Zm-160 0q-17 0-28.5-11.5T280 616q0-17 11.5-28.5T320 576q17 0 28.5 11.5T360 616q0 17-11.5 28.5T320 656Zm320 0q-17 0-28.5-11.5T600 616q0-17 11.5-28.5T640 576q17 0 28.5 11.5T680 616q0 17-11.5 28.5T640 656ZM480 816q-17 0-28.5-11.5T440 776q0-17 11.5-28.5T480 736q17 0 28.5 11.5T520 776q0 17-11.5 28.5T480 816Zm-160 0q-17 0-28.5-11.5T280 776q0-17 11.5-28.5T320 736q17 0 28.5 11.5T360 776q0 17-11.5 28.5T320 816Zm320 0q-17 0-28.5-11.5T600 776q0-17 11.5-28.5T640 736q17 0 28.5 11.5T680 776q0 17-11.5 28.5T640 816Z" />
+            </svg>
+        </div>
+
+        <style>
+            .calendar-icon-container {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-right: 0.1em;
+                margin-top: -2px;
+            }
+
+            .calendar-icon {
+                height: 1.3em;
+                width: 1.3em;
+            }
+        </style>
+    </template>
+
+    <script type="text/javascript">
+        class Calendar extends HTMLElement {
+            constructor() {
+                super();
+                let templateContent = document.getElementById("calendar-template").content;
+
+                const shadowRoot = this.attachShadow({mode: "open"});
+                shadowRoot.appendChild(templateContent.cloneNode(true));
+            }
+        }
+        customElements.define("calendar-icon", Calendar);
+    </script>
+    <!-- Location icon -->
+    <template id='location-template'>
+        <div class="location-icon-container">
+            <svg class='location-icon' xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+                <path
+                    d="M480.089 566Q509 566 529.5 545.411q20.5-20.588 20.5-49.5Q550 467 529.411 446.5q-20.588-20.5-49.5-20.5Q451 426 430.5 446.589q-20.5 20.588-20.5 49.5Q410 525 430.589 545.5q20.588 20.5 49.5 20.5ZM480 897q133-121 196.5-219.5T740 504q0-117.79-75.292-192.895Q589.417 236 480 236t-184.708 75.105Q220 386.21 220 504q0 75 65 173.5T480 897Zm0 79Q319 839 239.5 721.5T160 504q0-150 96.5-239T480 176q127 0 223.5 89T800 504q0 100-79.5 217.5T480 976Zm0-472Z" />
+            </svg>
+        </div>
+
+        <style>
+            .location-icon-container {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-right: 0.1em;
+                margin-top: -1px;
+            }
+
+            .location-icon {
+                height: 1.3em;
+                width: 1.3em;
+            }
+        </style>
+    </template>
+
+    <script type="text/javascript">
+        class Location extends HTMLElement {
+            constructor() {
+                super();
+                let templateContent = document.getElementById("location-template").content;
+
+                const shadowRoot = this.attachShadow({mode: "open"});
+                shadowRoot.appendChild(templateContent.cloneNode(true));
+            }
+        }
+        customElements.define("location-icon", Location);
+    </script>
+
+    <!-- Web Component for Web Link -->
+    <template id='web-link-template'>
+        <a href="">
+            <svg class='web-logo' xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+                <path
+                    d="M480 976q-84 0-157-31.5T196 859q-54-54-85-127.5T80 574q0-84 31-156.5T196 291q54-54 127-84.5T480 176q84 0 157 30.5T764 291q54 54 85 126.5T880 574q0 84-31 157.5T764 859q-54 54-127 85.5T480 976Zm0-58q35-36 58.5-82.5T577 725H384q14 60 37.5 108t58.5 85Zm-85-12q-25-38-43-82t-30-99H172q38 71 88 111.5T395 906Zm171-1q72-23 129.5-69T788 725H639q-13 54-30.5 98T566 905ZM152 665h159q-3-27-3.5-48.5T307 574q0-25 1-44.5t4-43.5H152q-7 24-9.5 43t-2.5 45q0 26 2.5 46.5T152 665Zm221 0h215q4-31 5-50.5t1-40.5q0-20-1-38.5t-5-49.5H373q-4 31-5 49.5t-1 38.5q0 21 1 40.5t5 50.5Zm275 0h160q7-24 9.5-44.5T820 574q0-26-2.5-45t-9.5-43H649q3 35 4 53.5t1 34.5q0 22-1.5 41.5T648 665Zm-10-239h150q-33-69-90.5-115T565 246q25 37 42.5 80T638 426Zm-254 0h194q-11-53-37-102.5T480 236q-32 27-54 71t-42 119Zm-212 0h151q11-54 28-96.5t43-82.5q-75 19-131 64t-91 115Z" />
+            </svg>
+            <div class="web-link-text">Link</div>
+        </a>
+
+        <style>
+            a {
+                text-decoration: none;
+                color: #222;
+                display: flex;
+                align-items: center;
+                height: 1.1em;
+                padding: 2px 2px;
+                float: left;
+                border-radius: 3px;
+                margin-bottom: 0.2em;
+            }
+
+            a:hover {
+                background-color: whitesmoke;
+            }
+
+            .web-logo {
+                height: 1em;
+                width: 1em;
+                margin-right: 0.4em;
+            }
+
+            .web-link-text {
+                padding-top: 2px;
+                margin-right: 0.7em;
+            }
+        </style>
+    </template>
+
+    <script type="text/javascript">
+        class WebLink extends HTMLElement {
+            constructor() {
+                super();
+                let templateContent = document.getElementById("web-link-template").content;
+
+                const shadowRoot = this.attachShadow({mode: "open"});
+                shadowRoot.appendChild(templateContent.cloneNode(true));
+
+                shadowRoot.querySelector('a').href = this.dataset.href;
+            }
+        }
+        customElements.define("web-link", WebLink);
+    </script>
 
 
     <!-- Web Component for Github Link -->
