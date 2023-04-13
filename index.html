@@ -3,25 +3,48 @@
 <html>
 
 <head>
-    <title>cktmn.site</title>
-    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    <title>cktmn</title>
+    <meta name="color-scheme" content="dark light">
+
+    <!-- <script type="text/javascript" src="http://livejs.com/live.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div id="container">
         <aside id='left'>
-            <nav>
+            <nav class='sans'>
                 <a href="#aboutme">About Me</a>
                 <a href="#cv">CV</a>
                 <a href="#professional_projects">Professional Projects</a>
                 <a href="#side_projects">Side Projects</a>
+                <!-- <div class='dark-toggle'> -->
+                <!--     <input type="checkbox" name="darkmode" value="darkmode" /> -->
+                <!--     <span>Dark</span> -->
+                <!-- </div> -->
+                <!-- <div class='light-toggle'> -->
+                <!--     <input type="checkbox" name="lightmode" value="lightmode" /> -->
+                <!--     <span>Light</span> -->
+                <!-- </div> -->
+                <!-- <button type="button" onclick="toggleTheme()">Toggle Theme</button> -->
             </nav>
         </aside>
 
         <main id='right'>
             <section id="aboutme">
-                <h1>Hello!</h1>
-                <p></p>
+                <img class='me' src="me.avif" alt="A photo of me that you cant see if your browser doesnt support avif">
+                <h1 id='hey'>Hi!</h1>
+                <p>My name is Christoph Kattmann and I'm an engineer from Germany who currently lives in Copenhagen,
+                    Denmark.</p>
+                <p>I am Managing Director at <a href='https://bss-hochspannungstechnik.de'>BSS</a>, where we build
+                    Partial Discharge Monitoring Systems for power transformers with rich web UIs and a powerful Cloud
+                    backend.</p>
+                <p>I am always happy to talk about Python, (Neo-)Vim, DevOps, web technologies, good old Linux
+                    tools, mechanical keyboards, gravel cycling, and the Art of Bicycle Maintenance.</p>
             </section>
 
             <section id="cv">
@@ -36,25 +59,16 @@
                         <h4>Stuttgart / Copenhagen</h4>
                     </div>
                     <p>
-                        Organically grown a startup from inception to stable operation with 500kEUR revenue in the
-                        energy
-                        grid asset monitoring business. Initiative, oversight and full-stack involvement in the
-                        development
-                        of a product line of power transformer monitoring systems including high-frequency analog
-                        sensors
-                        and circuits, embedded data processing, rich onboard UIs, and cloud backend including data
-                        management and visualization.
+                        Part of a startup team from inception to stable operation in the energy grid asset monitoring
+                        business.
+                        Initiative, oversight and full-stack involvement in the development of a product line of power
+                        transformer monitoring systems including high-frequency analog sensors and circuits, embedded
+                        data processing, rich on-board UIs, and a cloud back-end including data management and
+                        visualization.
                     </p>
-                    <ul>
-                        <li>Organizational, personal, and product leader of a bootstrapped and customer-funded company
-                        </li>
-                        <li>Ownership of customer relationships, marketing and sales processes</li>
-                        <li>Managed the development and bringing to market of a connected monitoring system for
-                            high-value energy grid assets</li>
-                    </ul>
                 </div>
                 <div class='section-item'>
-                    <h3>Scientist, University of Stuttgart</h3>
+                    <h3>Scientist, IEH, University of Stuttgart</h3>
                     <div class='h3-subtitle'>
                         <calendar-icon></calendar-icon>
                         <h4>03/2012 - 03/2018 </h4>
@@ -62,16 +76,9 @@
                         <h4>Stuttgart</h4>
                     </div>
                     <p>
-                        Teaching and research responsibilities, including organization of multiple research projects
-                        such as
+                        Teaching and research responsibilities at the Institute of Power Transmission and High Voltage
+                        Technology (IEH).
                     </p>
-                    <ul>
-                        <li>c/sells: 600MEUR project with 60+ companys over 3 years</li>
-                        <li>Fastpf, a power flow simulation library</li>
-                        <li>Installation and Management of an energy monitoring system in the ARENA2036 research factory
-                        </li>
-                        <li>Numerous publications, conference and industry standards group participations</li>
-                    </ul>
                 </div>
             </section>
 
@@ -117,7 +124,7 @@
                         <pypi-link data-href='https://pypi.org/project/fastpf'></pypi-link>
                     </div>
                     <p>
-                        Powerflow library developed at the University of Stuttgart, used for most result in my <a
+                        Powerflow library developed at the University of Stuttgart, used for most results in my <a
                             target="_blank" rel="noopener noreferrer"
                             href="https://www.ieh.uni-stuttgart.de/dokumente/dissertationen/2022_Dissertation_Kattmann_Langversion.pdf">Dissertation</a>.
                         Uses ahead-of-time compilation for Python code using numba, and demonstrates various performance
@@ -131,7 +138,8 @@
                         <web-link data-href="https://bss-hochspannungstechnik.de/en/products/pqm-800">Link</web-link>
                     </div>
                     <p>
-                        A high-frequency (1 Megasample x 8 channels) power quality monitoring system with dynamic transient triggers and high-resolution harmonics recording.
+                        A high-frequency (1 Megasample x 8 channels) power quality monitoring system with dynamic
+                        transient triggers and high-resolution harmonics recording.
                     </p>
                 </div>
             </section>
@@ -183,18 +191,42 @@
 
     <footer>
         <span>Christoph Kattmann 2023</span>
-        <github-link data-href='https://raw.githubusercontent.com/ckattmann/personal_site/main/index.html'>Source</github-link>
+        <github-link
+            data-href='https://raw.githubusercontent.com/ckattmann/personal_site/main/index.html'>Source</github-link>
     </footer>
 
     <!-- Main CSS -->
     <style>
+        :root {
+            --muted-font-color: #DDD;
+        }
+
+        :root.dark {
+            background-color: tomato;
+        }
+
         body {
+            font-family: 'Noto Sans JP', sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            font-size: 100%;
         }
+
+        body.dark-theme {
+            back
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        {
+        font-weight: 400;
+        }
+
 
         #container {
             display: flex;
@@ -222,12 +254,14 @@
 
         nav>a {
             text-decoration: none;
-            color: gray;
+            color: CanvasText;
         }
 
         nav>a:hover {
-            color: black;
+            filter: contrast(20%);
         }
+
+
 
         #right {
             flex: 2 1 800px;
@@ -236,6 +270,14 @@
         section {
             min-height: 80vh;
             padding-top: 10em;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #hey {
+            font-size: 3em;
         }
 
         h2 {
@@ -248,7 +290,7 @@
         }
 
         .section-item h3 {
-            margin-top: 2em;
+            margin-top: 3em;
             margin-bottom: 0.2em;
         }
 
@@ -261,8 +303,10 @@
         }
 
         .section-item h4 {
-            margin-top: 0.2em;
-            margin-bottom: 0.2em;
+            font-weight: 300;
+            font-size: 0.9em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
         }
 
         .section-item p {
@@ -276,11 +320,40 @@
             margin: 2em 0;
         }
 
-        footer > *{
+        footer>* {
             margin: 0 1em;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            path {
+                stroke: white;
+                fill: white;
+            }
+
+            img.me {
+                filter: brightness(30%);
+            }
         }
     </style>
 
+    <script>
+        function toggleTheme() {
+            <!-- document.body.classList.toggle("dark-mode"); -->
+            if (document.documentElement.classList.contains("light")) {
+                document.documentElement.classList.remove("light")
+                document.documentElement.classList.add("dark")
+            } else if (document.documentElement.classList.contains("dark")) {
+                document.documentElement.classList.remove("dark")
+                document.documentElement.classList.add("light")
+            } else {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add("dark")
+                } else {
+                    document.documentElement.classList.add("light")
+                }
+            }
+        }
+    </script>
 
 
 
@@ -288,7 +361,7 @@
     <template id='calendar-template'>
         <div class="calendar-icon-container">
             <svg class='calendar-icon' xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
-                <path
+                <path class="path"
                     d="M180 976q-24 0-42-18t-18-42V296q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600V486H180v430Zm0-490h600V296H180v130Zm0 0V296v130Zm300 230q-17 0-28.5-11.5T440 616q0-17 11.5-28.5T480 576q17 0 28.5 11.5T520 616q0 17-11.5 28.5T480 656Zm-160 0q-17 0-28.5-11.5T280 616q0-17 11.5-28.5T320 576q17 0 28.5 11.5T360 616q0 17-11.5 28.5T320 656Zm320 0q-17 0-28.5-11.5T600 616q0-17 11.5-28.5T640 576q17 0 28.5 11.5T680 616q0 17-11.5 28.5T640 656ZM480 816q-17 0-28.5-11.5T440 776q0-17 11.5-28.5T480 736q17 0 28.5 11.5T520 776q0 17-11.5 28.5T480 816Zm-160 0q-17 0-28.5-11.5T280 776q0-17 11.5-28.5T320 736q17 0 28.5 11.5T360 776q0 17-11.5 28.5T320 816Zm320 0q-17 0-28.5-11.5T600 776q0-17 11.5-28.5T640 736q17 0 28.5 11.5T680 776q0 17-11.5 28.5T640 816Z" />
             </svg>
         </div>
@@ -306,6 +379,12 @@
             .calendar-icon {
                 height: 1.3em;
                 width: 1.3em;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                svg path {
+                    fill: white;
+                }
             }
         </style>
     </template>
@@ -345,6 +424,12 @@
                 height: 1.3em;
                 width: 1.3em;
             }
+
+            @media (prefers-color-scheme: dark) {
+                svg path {
+                    fill: white;
+                }
+            }
         </style>
     </template>
 
@@ -368,13 +453,15 @@
                 <path
                     d="M480 976q-84 0-157-31.5T196 859q-54-54-85-127.5T80 574q0-84 31-156.5T196 291q54-54 127-84.5T480 176q84 0 157 30.5T764 291q54 54 85 126.5T880 574q0 84-31 157.5T764 859q-54 54-127 85.5T480 976Zm0-58q35-36 58.5-82.5T577 725H384q14 60 37.5 108t58.5 85Zm-85-12q-25-38-43-82t-30-99H172q38 71 88 111.5T395 906Zm171-1q72-23 129.5-69T788 725H639q-13 54-30.5 98T566 905ZM152 665h159q-3-27-3.5-48.5T307 574q0-25 1-44.5t4-43.5H152q-7 24-9.5 43t-2.5 45q0 26 2.5 46.5T152 665Zm221 0h215q4-31 5-50.5t1-40.5q0-20-1-38.5t-5-49.5H373q-4 31-5 49.5t-1 38.5q0 21 1 40.5t5 50.5Zm275 0h160q7-24 9.5-44.5T820 574q0-26-2.5-45t-9.5-43H649q3 35 4 53.5t1 34.5q0 22-1.5 41.5T648 665Zm-10-239h150q-33-69-90.5-115T565 246q25 37 42.5 80T638 426Zm-254 0h194q-11-53-37-102.5T480 236q-32 27-54 71t-42 119Zm-212 0h151q11-54 28-96.5t43-82.5q-75 19-131 64t-91 115Z" />
             </svg>
-            <div class="web-link-text">Link</div>
+            <span class="web-link-text">Link</span>
         </a>
 
         <style>
             a {
                 text-decoration: none;
-                color: #222;
+                color: CanvasText;
+                font-family: 'Noto Sans JP', sans-serif;
+                font-size: 0.9em;
                 display: flex;
                 align-items: center;
                 height: 1.1em;
@@ -385,7 +472,13 @@
             }
 
             a:hover {
-                background-color: whitesmoke;
+                background-color: CanvasText;
+                color: Canvas;
+            }
+
+            a:hover path {
+                stroke: Canvas;
+                fill: Canvas;
             }
 
             .web-logo {
@@ -395,8 +488,15 @@
             }
 
             .web-link-text {
-                padding-top: 2px;
+                font-size: 1.2em;
                 margin-right: 0.7em;
+                padding-bottom: 3px;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                svg path {
+                    fill: white;
+                }
             }
         </style>
     </template>
@@ -431,7 +531,7 @@
         <style>
             a {
                 text-decoration: none;
-                color: #222;
+                color: CanvasText;
                 display: flex;
                 align-items: center;
                 height: 1.1em;
@@ -442,7 +542,8 @@
             }
 
             a:hover {
-                background-color: whitesmoke;
+                background-color: CanvasText;
+                color: Canvas;
             }
 
             .github-logo {
@@ -453,7 +554,8 @@
 
             .github-link-text {
                 padding-top: 2px;
-                margin-right: 0.7em;
+                margin-right: 0.5em;
+                padding-bottom: 3px;
             }
         </style>
     </template>
@@ -555,7 +657,7 @@
         <style>
             a {
                 text-decoration: none;
-                color: #222;
+                color: CanvasText;
                 display: flex;
                 align-items: center;
                 height: 1.1em;
@@ -566,7 +668,8 @@
             }
 
             a:hover {
-                background-color: whitesmoke;
+                background-color: CanvasText;
+                color: Canvas;
             }
 
             .pypi-logo {
@@ -576,6 +679,7 @@
             }
 
             .pypi-link-text {
+                margin-right: 0.5em;
                 padding-top: 2px;
             }
         </style>
