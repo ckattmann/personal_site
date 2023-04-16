@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
     <!-- Uncomment for development: -->
-    <!-- <script type="text/javascript" src="http://livejs.com/live.js"></script> -->
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
@@ -40,7 +40,18 @@
 
         <main id='right'>
             <section id="aboutme">
-                <img class='me' src="me.avif" alt="A photo of me that you cant see if your browser doesnt support avif">
+                <picture class="me light">
+                    <source type="image/avif" , srcset="me_wide_light.avif">
+                    <source type="image/webp" , srcset="me_wide_light.webp">
+                    <img src="me_wide_light.png" alt="A photo of me. Youre not missing much.">
+                </picture>
+
+                <picture class="me dark">
+                    <source type="image/avif" , srcset="me_wide_dark.avif">
+                    <source type="image/webp" , srcset="me_wide_dark.webp">
+                    <img src="me_wide_dark.png" alt="A photo of me. Youre not missing much.">
+                </picture>
+
                 <h1 id='hey'>Hi!</h1>
                 <p>My name is Christoph Kattmann and I'm an engineer from Germany who currently lives in Copenhagen,
                     Denmark.</p>
@@ -280,8 +291,6 @@
             filter: contrast(20%);
         }
 
-
-
         #right {
             flex: 2 1 800px;
         }
@@ -293,6 +302,10 @@
 
         img {
             width: 100%;
+        }
+
+        picture.dark {
+            display: none;
         }
 
         #hey {
@@ -353,8 +366,16 @@
                 fill: white;
             }
 
-            img.me {
-                filter: brightness(30%);
+            picture.me {
+                filter: brightness(90%);
+            }
+
+            picture.dark {
+                display: block;
+            }
+
+            picture.light {
+                display: none;
             }
         }
     </style>
