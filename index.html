@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -201,6 +201,18 @@
                         timestamp formats.
                     </p>
                 </div>
+
+                <div class='section-item'>
+                    <h3>CKTMN.COM</h3>
+                    <div class='link-line'>
+                        <github-link data-href='https://github.com/ckattmann/personal_site'></github-link>
+                    </div>
+                    <p>
+                        This website. Minimal, raw HTML, CSS, Web Components and SVG crafted with only the bestest of
+                        practices. At least the Yaks won't get cold in our luxurious bike shed.
+                    </p>
+                </div>
+
             </section>
 
         </main>
@@ -221,6 +233,7 @@
             src: url('./NotoSansRegularSubset.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
+            font-display: block;
         }
 
         @font-face {
@@ -228,6 +241,7 @@
             src: url('./NotoSansBoldSubset.woff2') format('woff2');
             font-weight: bold;
             font-style: normal;
+            font-display: block;
         }
 
         :root {
@@ -358,30 +372,43 @@
         footer>* {
             margin: 0 1em;
         }
+
         @media(max-width:1000px) {
             #container {
                 flex-direction: column;
                 padding: 1em;
             }
+
             #left {
-                justify-content: flex-start;
+                justify-content: flex-end;
                 position: static;
-                top:auto;
+                top: auto;
                 padding-top: 0;
+                padding-right: 0;
             }
+
             #left nav {
                 margin-top: 2em;
+                margin-bottom: 4em;
                 position: relative;
                 font-size: 1.3em;
             }
+
+            #left nav a {
+                font-size: 1.5em;
+                margin: 4px 0;
+            }
+
             nav>a:active {
                 filter: contrast(20%);
             }
+
             section {
                 min-height: 0;
                 padding-top: 0;
                 margin-bottom: 5em;
             }
+
             h2 {
                 font-size: 1.8em;
                 padding-top: 1em;
