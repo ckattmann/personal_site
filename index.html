@@ -435,24 +435,24 @@
         }
     </style>
 
-    <script>
-        function toggleTheme() {
-            <!-- document.body.classList.toggle("dark-mode"); -->
-            if (document.documentElement.classList.contains("light")) {
-                document.documentElement.classList.remove("light")
-                document.documentElement.classList.add("dark")
-            } else if (document.documentElement.classList.contains("dark")) {
-                document.documentElement.classList.remove("dark")
-                document.documentElement.classList.add("light")
-            } else {
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.classList.add("dark")
-                } else {
-                    document.documentElement.classList.add("light")
-                }
-            }
-        }
-    </script>
+    <!-- <script> -->
+    <!--     function toggleTheme() { -->
+    <!--         <!-- document.body.classList.toggle("dark-mode"); --> -->
+    <!--         if (document.documentElement.classList.contains("light")) { -->
+    <!--             document.documentElement.classList.remove("light") -->
+    <!--             document.documentElement.classList.add("dark") -->
+    <!--         } else if (document.documentElement.classList.contains("dark")) { -->
+    <!--             document.documentElement.classList.remove("dark") -->
+    <!--             document.documentElement.classList.add("light") -->
+    <!--         } else { -->
+    <!--             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { -->
+    <!--                 document.documentElement.classList.add("dark") -->
+    <!--             } else { -->
+    <!--                 document.documentElement.classList.add("light") -->
+    <!--             } -->
+    <!--         } -->
+    <!--     } -->
+    <!-- </script> -->
 
 
 
@@ -574,19 +574,14 @@
             }
 
             a:hover {
-                background-color: CanvasText;
-                color: Canvas;
-            }
-
-            a:hover path {
-                stroke: Canvas;
-                fill: Canvas;
+                text-decoration: underline;
             }
 
             .web-logo {
-                height: 1em;
-                width: 1em;
+                height: 1.2em;
+                width: 1.2em;
                 margin-right: 0.4em;
+                margin-bottom: 3px;
             }
 
             .web-link-text {
