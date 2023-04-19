@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
     <!-- Uncomment for development: -->
-    <!-- <script type="text/javascript" src="http://livejs.com/live.js"></script> -->
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
 
     <link rel="preload" href="/NotoSansRegularSubset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/NotoSansBoldSubset.woff2" as="font" type="font/woff2" crossorigin>
@@ -46,13 +46,13 @@
                 <picture class="me light">
                     <source type="image/avif" , srcset="me_wide_light.avif">
                     <source type="image/webp" , srcset="me_wide_light.webp">
-                    <img src="me_wide_light.png" alt="A photo of me. Youre not missing much.">
+                    <img src="me_wide_light.png" width='2449' height='1050' alt="A photo of me. Youre not missing much.">
                 </picture>
 
                 <picture class="me dark">
                     <source type="image/avif" , srcset="me_wide_dark.avif">
                     <source type="image/webp" , srcset="me_wide_dark.webp">
-                    <img src="me_wide_dark.png" alt="A photo of me. Youre not missing much.">
+                    <img src="me_wide_dark.png" width='2449' height='1050' alt="A photo of me. Youre not missing much.">
                 </picture>
 
                 <h1 id='hey'>Hi!</h1>
@@ -315,6 +315,7 @@
 
         img {
             width: 100%;
+            height: auto;
         }
 
         picture.dark {
