@@ -26,7 +26,7 @@
         <div id='left'>
             <nav>
                 <a href="#aboutme">About Me</a>
-                <a href="#cv">CV</a>
+                <!-- <a href="#cv">CV</a> -->
                 <a href="#professional_projects">Professional Projects</a>
                 <a href="#side_projects">Side Projects</a>
                 <!-- <div class='dark-toggle'> -->
@@ -65,40 +65,40 @@
                     tools, mechanical keyboards, gravel cycling, and the Art of Bicycle Maintenance.</p>
             </section>
 
-            <section id="cv">
-                <h2>CV</h2>
-
-                <div class='section-item'>
-                    <h3>Managing Director, BSS Hochspannungstechnik GmbH</h3>
-                    <div class='h3-subtitle'>
-                        <calendar-icon></calendar-icon>
-                        <h4>03/2018 - now </h4>
-                        <location-icon></location-icon>
-                        <h4>Stuttgart / Copenhagen</h4>
-                    </div>
-                    <p>
-                        Part of a startup team from inception to stable operation in the energy grid asset monitoring
-                        business.
-                        Initiative, oversight and full-stack involvement in the development of a product line of power
-                        transformer monitoring systems including high-frequency analog sensors and circuits, embedded
-                        data processing, rich on-board UIs, and a cloud back-end including data management and
-                        visualization.
-                    </p>
-                </div>
-                <div class='section-item'>
-                    <h3>Scientist, IEH, University of Stuttgart</h3>
-                    <div class='h3-subtitle'>
-                        <calendar-icon></calendar-icon>
-                        <h4>03/2012 - 03/2018 </h4>
-                        <location-icon></location-icon>
-                        <h4>Stuttgart</h4>
-                    </div>
-                    <p>
-                        Teaching and research responsibilities at the Institute of Power Transmission and High Voltage
-                        Technology (IEH).
-                    </p>
-                </div>
-            </section>
+            <!-- <section id="cv"> -->
+            <!--     <h2>CV</h2> -->
+            <!---->
+            <!--     <div class='section-item'> -->
+            <!--         <h3>Managing Director, BSS Hochspannungstechnik GmbH</h3> -->
+            <!--         <div class='h3-subtitle'> -->
+            <!--             <calendar-icon></calendar-icon> -->
+            <!--             <h4>03/2018 - now </h4> -->
+            <!--             <location-icon></location-icon> -->
+            <!--             <h4>Stuttgart / Copenhagen</h4> -->
+            <!--         </div> -->
+            <!--         <p> -->
+            <!--             Part of a startup team from inception to stable operation in the energy grid asset monitoring -->
+            <!--             business. -->
+            <!--             Initiative, oversight and full-stack involvement in the development of a product line of power -->
+            <!--             transformer monitoring systems including high-frequency analog sensors and circuits, embedded -->
+            <!--             data processing, rich on-board UIs, and a cloud back-end including data management and -->
+            <!--             visualization. -->
+            <!--         </p> -->
+            <!--     </div> -->
+            <!--     <div class='section-item'> -->
+            <!--         <h3>Scientist, IEH, University of Stuttgart</h3> -->
+            <!--         <div class='h3-subtitle'> -->
+            <!--             <calendar-icon></calendar-icon> -->
+            <!--             <h4>03/2012 - 03/2018 </h4> -->
+            <!--             <location-icon></location-icon> -->
+            <!--             <h4>Stuttgart</h4> -->
+            <!--         </div> -->
+            <!--         <p> -->
+            <!--             Teaching and research responsibilities at the Institute of Power Transmission and High Voltage -->
+            <!--             Technology (IEH). -->
+            <!--         </p> -->
+            <!--     </div> -->
+            <!-- </section> -->
 
             <section id="professional_projects">
                 <h2>Professional Projects</h2>
@@ -203,9 +203,10 @@
                 </div>
 
                 <div class='section-item'>
-                    <h3>CKTMN.COM</h3>
+                    <h3>cktmn.com</h3>
                     <div class='link-line'>
                         <github-link data-href='https://github.com/ckattmann/personal_site'></github-link>
+                        <web-link data-href="https://cktmn.com">Link</web-link>
                     </div>
                     <p>
                         This website. Minimal, raw HTML, CSS, Web Components and SVG crafted with only the bestest of
@@ -438,7 +439,7 @@
 
     <!-- <script> -->
     <!--     function toggleTheme() { -->
-    <!--         <!-- document.body.classList.toggle("dark-mode"); --> -->
+    <!--         <!-- document.body.classList.toggle("dark-mode"); -->
     <!--         if (document.documentElement.classList.contains("light")) { -->
     <!--             document.documentElement.classList.remove("light") -->
     <!--             document.documentElement.classList.add("dark") -->
@@ -563,15 +564,15 @@
             a {
                 text-decoration: none;
                 color: CanvasText;
-                font-family: 'Noto Sans JP', sans-serif;
-                font-size: 0.9em;
+                /* font-size: 0.9em; */
                 display: flex;
                 align-items: center;
                 height: 1.1em;
-                padding: 2px 2px;
+                padding: 5px 5px;
+                padding-left: 0;
+                padding-right: 10px;
                 float: left;
                 border-radius: 3px;
-                margin-bottom: 0.2em;
             }
 
             a:hover {
@@ -582,13 +583,16 @@
                 height: 1.2em;
                 width: 1.2em;
                 margin-right: 0.4em;
-                margin-bottom: 3px;
             }
 
             .web-link-text {
-                font-size: 1.2em;
-                margin-right: 0.7em;
-                padding-bottom: 3px;
+                /* font-size: 1.2em; */
+                /* margin-right: 0.7em; */
+                /* padding-bottom: 3px; */
+                /* padding-top: 2px; */
+                /* margin-right: 0.5em; */
+                /* padding-bottom: 3px; */
+
             }
 
             @media (prefers-color-scheme: dark) {
@@ -637,16 +641,15 @@
                 align-items: center;
                 height: 1.1em;
                 padding: 5px 5px;
+                padding-left: 0;
+                padding-right: 10px;
                 float: left;
                 border-radius: 3px;
-                margin-bottom: 0.2em;
             }
 
-
-            a:hover>* {
+            a:hover .github-link-text .link {
                 text-decoration: underline;
             }
-
 
             .github-logo {
                 height: 1.4em;
@@ -655,7 +658,7 @@
             }
 
             .github-link-text {
-                padding-top: 2px;
+                padding-top: 1px;
                 margin-right: 0.5em;
                 padding-bottom: 3px;
             }
@@ -675,7 +678,6 @@
             }
         }
         customElements.define("github-link", GithubLink);
-
     </script>
 
 
@@ -763,10 +765,11 @@
                 display: flex;
                 align-items: center;
                 height: 1.1em;
-                padding: 2px 2px;
+                padding: 5px 5px;
+                padding-left: 0;
+                padding-right: 10px;
                 float: left;
                 border-radius: 3px;
-                margin-bottom: 0.2em;
             }
 
             a:hover .pypi-link-text {
@@ -799,8 +802,8 @@
             }
         }
         customElements.define("pypi-link", PyPILink);
-
     </script>
+
 </body>
 
 
